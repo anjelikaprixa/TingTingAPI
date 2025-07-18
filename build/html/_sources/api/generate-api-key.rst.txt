@@ -1,0 +1,30 @@
+Generate API Key Endpoint
+=============================
+
++----------------------------------------------------------------------+-------------------+-----------------+
+| URL                                                                  | Required Values   | HTTP Methods    |
++======================================================================+===================+=================+
+| https://newtingtingapi.prixa.live/api/v1/auths/generate-api-keys/    |                   | POST            |
++----------------------------------------------------------------------+-------------------+-----------------+
+
+This endpoint is used to generate a new API token (access & secret key pair) for the authenticated user. When a new token is generated, any previous keys are automatically soft-deleted, ensuring only one valid pair exists at a time.
+
+You must include a valid Bearer Token in the request header to generate new API keys.
+
+Header Example:
+
+.. code-block:: http
+
+    Authorization: Bearer <your_access_token>
+
+Sample Request:
+(No body is required)
+
+Sample Output:
+
+.. code-block:: json
+
+    {
+        "token": 7acbdcd5619e4b9eaaad8e41dabb7032298e1acdf8fbc99bfae70561b51cdee7,
+        "message": "New API token generated successfully"
+    }

@@ -7,4 +7,5 @@ Authentication
     login-endpoint
     refresh-token
     get-api-key
+    generate-api-key
     user-detail
