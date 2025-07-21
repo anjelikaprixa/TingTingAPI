@@ -4,7 +4,7 @@ Generate API Key Endpoint
 +----------------------------------------------------------------------+-------------------+-----------------+
 | URL                                                                  | Required Values   | HTTP Methods    |
 +======================================================================+===================+=================+
-| https://newtingtingapi.prixa.live/api/v1/auths/generate-api-keys/    |                   | POST            |
+| https://api.tingting.io/api/v1/auths/generate-api-keys/    |                   | POST            |
 +----------------------------------------------------------------------+-------------------+-----------------+
 
 This endpoint is used to generate a new API token (access & secret key pair) for the authenticated user. When a new token is generated, any previous keys are automatically soft-deleted, ensuring only one valid pair exists at a time.
