@@ -6,6 +6,6 @@ Authentication
 
     login-endpoint
     refresh-token
-    get-api-key
     generate-api-key
+    get-api-key
     user-detail

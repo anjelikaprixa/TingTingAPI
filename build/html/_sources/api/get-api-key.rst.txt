@@ -1,4 +1,4 @@
-Get API Key Endpoint
+Get API Token Endpoint
 =============================
 
 +--------------------------------------------------------------------+-------------------+-----------------+
@@ -7,40 +7,34 @@ Get API Key Endpoint
 | https://api.tingting.io/api/v1/auths/get-api-keys/       |                   | GET             |
 +--------------------------------------------------------------------+-------------------+-----------------+
 
-This endpoint returns the access_key and secret_key associated with the currently authenticated user. These keys can be used as an alternative to JWT login for authenticating API requests.
+This endpoint returns the API token associated with the currently authenticated user. This token can be used as an alternative to JWT login for authenticating API requests.
 
-Sample Output (when API key exists):
-
-.. code-block:: json
-
-    {
-        "access_key": "39106a38ac483eb4625308fe98411588",
-        "secret_key": "4d97e63d3b59ff6a924acfbe21781187cb4f35ea7be478c033146eb4b4102464"
-    }
-
-Sample Output (when API key is not found):
+Sample Output (when API token exists):
 
 .. code-block:: json
 
     {
-        "message": "No API credentials found for this user."
+        "token": "39106a38ac483eb4625308fe98411588",
+        "last_used": "2025-02-20T14:30:00.000Z",
+        "created_at": "2025-03-14T14:30:00.000Z",
     }
 
-**How to Use API Keys**
+Sample Output (when API token is not found):
 
-Once you retrieve the API keys, you can authenticate without logging in again by passing them in the request headers for other endpoints.
+.. code-block:: json
 
-Required Headers:
+    {
+        "message": "No API token found. Please generate one first."
+    }
+
+**How to Use API Token**
+
+Once you retrieve the API token, you can authenticate without logging in again by passing them as Bearer Token for other endpoints.
+
+You must include a valid Bearer Token in the request header to access other endpoint.
+
+Header Example:
 
 .. code-block:: http
 
-    X-ACCESS-KEY: 39106a38ac483eb4625308fe98411588
-    X-SECRET-KEY: 4d97e63d3b59ff6a924acfbe21781187cb4f35ea7be478c033146eb4b4102464
-
-**Notes**
-
-This endpoint is read-only and does not generate new keys.
-
-Keys retrieved from this endpoint can be used to authorize requests to other API services.
-
-Ensure you store the keys securely in your client environment.
+    Authorization: Bearer <your_access_token>
