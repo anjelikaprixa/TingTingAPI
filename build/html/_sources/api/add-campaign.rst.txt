@@ -4,7 +4,7 @@ Add Campaign Endpoint
 +--------------------------------------------------------------------+--------------------------------------------------------------------------------+----------------+
 | URL                                                                | Required Values                                                                | HTTP Methods   |
 +====================================================================+================================================================================+================+
-| https://api.tingting.io/api/v1/campaign/create/          | name, services, user_phone, message, sms_message, description, schedule, voice |     POST       |
+| https://api.tingting.io/api/v1/campaign/create/                    | name, services, user_phone, message, sms_message, description, schedule, voice |     POST       |
 +--------------------------------------------------------------------+--------------------------------------------------------------------------------+----------------+
 
 To add a campaign, you’ll need to access the campaign endpoint using the HTTP POST method. The required inputs for 

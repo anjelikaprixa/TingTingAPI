@@ -4,7 +4,7 @@ Generate API Token Endpoint
 +----------------------------------------------------------------------+-------------------+-----------------+
 | URL                                                                  | Required Values   | HTTP Methods    |
 +======================================================================+===================+=================+
-| https://api.tingting.io/api/v1/auths/generate-api-keys/    |                   | POST            |
+| https://api.tingting.io/api/v1/auths/generate-api-keys/              |                   | POST            |
 +----------------------------------------------------------------------+-------------------+-----------------+
 
 This endpoint is used to generate a new API token for the authenticated user. When a new token is generated, any previous keys are automatically soft-deleted, ensuring only one valid pair exists at a time.

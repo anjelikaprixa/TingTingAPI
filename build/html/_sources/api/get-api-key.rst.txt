@@ -4,7 +4,7 @@ Get API Token Endpoint
 +--------------------------------------------------------------------+-------------------+-----------------+
 | URL                                                                | Required Values   | HTTP Methods    |
 +====================================================================+===================+=================+
-| https://api.tingting.io/api/v1/auths/get-api-keys/       |                   | GET             |
+| https://api.tingting.io/api/v1/auths/get-api-keys/                 |                   | GET             |
 +--------------------------------------------------------------------+-------------------+-----------------+
 
 This endpoint returns the API token associated with the currently authenticated user. This token can be used as an alternative to JWT login for authenticating API requests.
