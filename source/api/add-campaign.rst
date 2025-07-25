@@ -83,7 +83,7 @@ Sample Input:
 
     {
         "voice" : 3,
-        "category" : "example category"
+        "category" : "Text"
     }
 
 As message, sms_message is already provided above so no need to provide here. length_factor default value is 1 and draft value is false.
@@ -96,7 +96,7 @@ Sample Output:
         "voice": 3,
         "sms_message": "SMS check!!",
         "message": "Hello, how are you?",
-        "category": "example category",
+        "category": "Text",
         "draft": false,
         "length_factor": "1.00"
     }
