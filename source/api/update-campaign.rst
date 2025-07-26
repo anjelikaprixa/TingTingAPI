@@ -20,8 +20,8 @@ Sample Input:
     {
         "name" : "example test campaign example",
         "services" : "SMS & PHONE",
-        "message" : "Hello, how are you hello?",
-        "sms_message" : "SMS check is going on!!",
+        "message" : "",
+        "sms_message" : "नमस्ते तिङ्तिङ् मा स्वागत् छ",
         "schedule" : "2025-07-09"
     }
 

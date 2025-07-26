@@ -28,8 +28,8 @@ Sample Input:
         "name" : "example test campaign",
         "services" : "PHONE",
         "user_phone" : [3],                   
-        "message" : "Hello, how are you?",
-        "sms_message" : "SMS check!!",
+        "message" : "नमस्ते तिङ्तिङ् मा स्वागत् छ",
+        "sms_message" : "नमस्ते तिङ्तिङ् मा स्वागत् छ",
         "description" : "Test message",
         "schedule" : "2025-07-08",         
     }
@@ -43,8 +43,8 @@ Sample Output:
         "name": "example test campaign",
         "services": "PHONE",
         "status": "Not Started",
-        "sms_message": "SMS check!!",
-        "message": "Hello, how are you?",
+        "sms_message": "नमस्ते तिङ्तिङ् म स्वागत् छ ",
+        "message": "नमस्ते तिङ्तिङ् म स्वागत् छ ",
         "description": "Test message",
         "schedule": "2025-07-08T00:00:00+05:45",
         "audio_file": null,
@@ -93,8 +93,8 @@ Sample Output:
 
     {
         "voice": 3,
-        "sms_message": "SMS check!!",
-        "message": "Hello, how are you?",
+        "sms_message": "नमस्ते तिङ्तिङ् मा स्वागत् छ",
+        "message": "नमस्ते तिङ्तिङ् मा स्वागत् छ",
         "category": "Text",
         "draft": false,
         "length_factor": "1.00"
