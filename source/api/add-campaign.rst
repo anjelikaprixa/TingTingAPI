@@ -27,8 +27,7 @@ Sample Input:
     {
         "name" : "example test campaign",
         "services" : "PHONE",
-        "credit_limit" : 100,
-        "user_phone" : [3],                   # Here, 3 is the id of the phone number
+        "user_phone" : [3],                   
         "message" : "Hello, how are you?",
         "sms_message" : "SMS check!!",
         "description" : "Test message",
