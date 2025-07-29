@@ -114,7 +114,12 @@ Sample Input To Add Individual Contact:
 .. code-block:: json
 
     {
-        "number" : 9823561098
+        "number" : 9823561098,
+        "other_variables" : {
+            "age" : 23,
+            "name" : "Rajesh",
+            "salary" : 50000
+        }
     }
 
 Sample Output for Individual Contact:
