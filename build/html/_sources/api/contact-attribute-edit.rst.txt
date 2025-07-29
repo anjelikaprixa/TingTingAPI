@@ -1,19 +1,22 @@
-Contact Edit Endpoint
+Contact Attribute Edit Endpoint
 ==============
 
 +-------------------------------------------------------------------------------+-------------------+-----------------+
 | URL                                                                           | Required Values   | HTTP Methods    |
 +===============================================================================+===================+=================+
-| https://app.tingting.io/api/v1/phone-number/update/<contact_id>/              | Contact ID        | PATCH           |
+| https://app.tingting.io/api/v1/campaign/<contact_id>/attributes/              | Contact ID        | PATCH           |
 +-------------------------------------------------------------------------------+-------------------+-----------------+
 
-Note that the <contact_id> in the URL should be replaced with the ID of the contact you want to edit the details of.
+Note that the <contact_id> in the URL should be replaced with the ID of the contact you want to edit the attributes of.
+
 Sample Input:
 
 .. code-block:: json
 
     {
-        "number" : 9808684325
+        "age" : "22",
+        "name" : "Ram",
+        "salary" : "200000"
     }
 
 The details after the updating is successfully completed is shown
@@ -23,13 +26,7 @@ Sample Output:
 .. code-block:: json
 
     {
-        "id": 52,
-        "number": "9808684325",
-        "status": "not started",
-        "updated_at": "2025-07-07T15:48:59.617239+05:45",
-        "call_duration": "0s",
-        "playback": "",
-        "credit_consumed": 0,
-        "credit_consumed_SMS": 0,
-        "carrier": "Ncell"
+        "age": "22",
+        "name": "Ram",
+        "salary": "200000"
     }

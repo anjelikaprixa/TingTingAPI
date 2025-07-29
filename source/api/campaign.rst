@@ -13,6 +13,7 @@ Campaign
     contact-list
     contact-delete
     contact-information
+    contact-attribute-edit
     contact-edit
     test-voice
     demo-call
