@@ -4,7 +4,7 @@ Send OTP Endpoint
 +---------------------------------------------------------------------+-----------------------------------+---------------+
 | URL                                                                 | Required Values                   | HTTP Methods  |
 +=====================================================================+===================================+===============+
-| https://app.tingting.io/api/system/send/otp/                        | number, message, sms_send_options |     POST      |
+| https://app.tingting.io/api/v1/auths/send/otp/                      | number, message, sms_send_options |     POST      |
 +---------------------------------------------------------------------+-----------------------------------+---------------+
 
 By utilizing this endpoint, you can send OTPs to users by specifying the recipient’s phone number as a string, along with the message containing the OTP 
