@@ -5,3 +5,4 @@ OTP
     :maxdepth: 1
 
     send-otp
+    list-send-otp
