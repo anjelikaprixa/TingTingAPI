@@ -8,7 +8,7 @@ Send OTP Endpoint
 +---------------------------------------------------------------------+-----------------------------------+---------------+
 
 By utilizing this endpoint, you can send OTPs to users by specifying the recipient’s phone number as a string, along with the message containing the OTP 
-and the desired delivery method - either through text through the sms_send_option attribute. The OTP can be integrated in the message by passing 
+and the desired delivery method - through text through the sms_send_option attribute. The OTP can be integrated in the message by passing 
 it inside curly braces of the messages attribute.
 
 For Example,
