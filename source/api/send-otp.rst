@@ -56,16 +56,18 @@ Sample Output:
 
     {
         "status": 200,
-            "success": true,
-            "message": "OTP Sent Successfully.",
-            "errors": [],
-            "data": {
-                "details" : {
-                        "number": "9843818700",
-                        "otp_options": "personnel",
-                        "message": "Hi your OTP is 1 2 3 4 5",
-                        "otp": "12345",
-                        "sms_send_options": "text"
-                }
-                }
+        "success": true,
+        "message": "OTP Sent Successfully.",
+        "errors": [],
+        "data": {
+            "details" : {
+                    "number": "9843818700",
+                    "otp_options": "personnel",
+                    "message": "Hi your OTP is 1 2 3 4 5",
+                    "otp": "12345",
+                    "sms_send_options": "text",
+                    "credits_used": 1,
+                    "remaining_credits": 86
+            }
+        }
     }
