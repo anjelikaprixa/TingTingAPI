@@ -8,7 +8,7 @@ Send OTP Endpoint
 +---------------------------------------------------------------------+-----------------------------------+---------------+
 
 By utilizing this endpoint, you can send OTPs to users by specifying the recipient’s phone number as a string, along with the message containing the OTP 
-and the desired delivery method - through text through the sms_send_option attribute. The OTP can be integrated in the message by passing 
+and the desired delivery method - through text and voice through the sms_send_options attribute. The OTP can be integrated in the message by passing 
 it inside curly braces of the messages attribute.
 
 For Example,
@@ -36,6 +36,17 @@ Sample Input For Customized OTP
         "otp": "12345"
     }
 
+.. code-block:: json
+
+    {
+        "number": "9851023212",
+        "message": "Hi your OTP is {otp}",
+        "sms_send_options": "voice",
+        "voice_input": "np_rija",
+        "otp_options": "personnel",
+        "otp": "12345"
+    }
+
 Sample Input For Auto-Generated OTP
 
 .. code-block:: json
@@ -50,7 +61,7 @@ Sample Input For Auto-Generated OTP
 
 The details of the sent OTP is shown.
 
-Sample Output:
+Sample Output for text:
 
 .. code-block:: json
 
@@ -60,14 +71,41 @@ Sample Output:
         "message": "OTP Sent Successfully.",
         "errors": [],
         "data": {
-            "details" : {
-                    "number": "9843818700",
-                    "otp_options": "personnel",
-                    "message": "Hi your OTP is 1 2 3 4 5",
-                    "otp": "12345",
-                    "sms_send_options": "text",
-                    "credits_used": 1,
-                    "remaining_credits": 86
+            "details": {
+                "number": "9861489014",
+                "otp_options": "personnel",
+                "message": "हेल्लो नमस्ते",
+                "otp": "564546",
+                "sms_send_options": "text",
+                "credits_used": 1,
+                "remaining_sms_credits": 62,
+                "remaining_phone_credits": 127
             }
         }
     }
+
+
+Sample Output for voice:
+
+.. code-block:: json
+
+    {
+    "status": 200,
+    "success": true,
+    "message": "OTP Call Initiated Successfully.",
+    "errors": [],
+    "data": {
+        "details": {
+            "number": "9861489014",
+            "otp_options": "personnel",
+            "message": "हेल्लो नमस्ते",
+            "otp": "564546",
+            "sms_send_options": "voice",
+            "credits_used": 1,
+            "remaining_sms_credits": 63,
+            "remaining_phone_credits": 127,
+            "voice_input": "np_rija",
+            "length_factor": 1.0
+        }
+    }
+}

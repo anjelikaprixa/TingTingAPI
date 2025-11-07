@@ -100,7 +100,7 @@
 </tbody>
 </table>
 <p>By utilizing this endpoint, you can send OTPs to users by specifying the recipient’s phone number as a string, along with the message containing the OTP
-and the desired delivery method - through text through the sms_send_option attribute. The OTP can be integrated in the message by passing
+and the desired delivery method - through text and voice through the sms_send_options attribute. The OTP can be integrated in the message by passing
 it inside curly braces of the messages attribute.</p>
 <p>For Example,</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
@@ -121,6 +121,16 @@ In the generated scenario, you can specify the length via the otp_length for the
 <span class="p">}</span>
 </pre></div>
 </div>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;number&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;9851023212&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Hi your OTP is {otp}&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;sms_send_options&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;voice&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;voice_input&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;np_rija&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;otp_options&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;personnel&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;otp&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;12345&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 <p>Sample Input For Auto-Generated OTP</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;number&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;9851023212&quot;</span><span class="p">,</span>
@@ -132,26 +142,50 @@ In the generated scenario, you can specify the length via the otp_length for the
 </pre></div>
 </div>
 <p>The details of the sent OTP is shown.</p>
-<p>Sample Output:</p>
+<p>Sample Output for text:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OTP Sent Successfully.&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;errors&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
 <span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;details&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="nt">&quot;number&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;9843818700&quot;</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;otp_options&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;personnel&quot;</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Hi your OTP is 1 2 3 4 5&quot;</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;otp&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;12345&quot;</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;sms_send_options&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;text&quot;</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;credits_used&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;remaining_credits&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">86</span>
+<span class="w">        </span><span class="nt">&quot;details&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;number&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;9861489014&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;otp_options&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;personnel&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;हेल्लो नमस्ते&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;otp&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;564546&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;sms_send_options&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;text&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;credits_used&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;remaining_sms_credits&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">62</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;remaining_phone_credits&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">127</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </div>
+<p>Sample Output for voice:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span>
+<span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OTP Call Initiated Successfully.&quot;</span><span class="p">,</span>
+<span class="nt">&quot;errors&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;details&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;number&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;9861489014&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;otp_options&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;personnel&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;हेल्लो नमस्ते&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;otp&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;564546&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;sms_send_options&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;voice&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;credits_used&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;remaining_sms_credits&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">63</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;remaining_phone_credits&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">127</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;voice_input&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;np_rija&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;length_factor&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">1.0</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>}</p>
 </section>
 
 
