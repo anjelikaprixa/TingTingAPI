@@ -99,9 +99,9 @@
 </tr>
 </tbody>
 </table>
-<p>By utilizing this endpoint, you can send OTPs to users by specifying the recipient’s phone number as a string, along with the message containing the OTP
-and the desired delivery method - through text and voice through the sms_send_options attribute. The OTP can be integrated in the message by passing
-it inside curly braces of the messages attribute.</p>
+<p>By utilizing this endpoint, you can send OTPs to users by specifying the recipient’s phone number as a string, along with
+the message containing the OTP and the desired delivery method - either through voice or text through the sms_send_option attribute.
+The OTP can be integrated in the message by passing it inside curly braces of the messages attribute.</p>
 <p>For Example,</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Hi Your OTP is {otp}&quot;</span>
@@ -110,7 +110,8 @@ it inside curly braces of the messages attribute.</p>
 </div>
 <p>In addition, you have the flexibility to choose between sending your own OTP or generating it automatically through the OTP options attribute. The available options
 are personnel and generated. If you choose personnel, you’ll need to provide the OTP yourself. On the other hand, if you select generated, the OTP will be auto-generated.
-In the generated scenario, you can specify the length via the otp_length for the auto-generated OTP. If nothing is provided, by default a generated OTP will be provided.</p>
+In the generated scenario, you can specify the length via the otp_length for the auto-generated OTP. If nothing is provided, by default a generated OTP will be provided.
+If sms_send_options is chosen as voice then voice_input should be provided.</p>
 <p>Sample Input For Customized OTP</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;number&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;9851023212&quot;</span><span class="p">,</span>
@@ -121,6 +122,7 @@ In the generated scenario, you can specify the length via the otp_length for the
 <span class="p">}</span>
 </pre></div>
 </div>
+<p>Sample Input For Auto-Generated OTP</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;number&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;9851023212&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Hi your OTP is {otp}&quot;</span><span class="p">,</span>
@@ -128,16 +130,6 @@ In the generated scenario, you can specify the length via the otp_length for the
 <span class="w">    </span><span class="nt">&quot;voice_input&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;np_rija&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;otp_options&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;personnel&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;otp&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;12345&quot;</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<p>Sample Input For Auto-Generated OTP</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;number&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;9851023212&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Hi your OTP is {otp}&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;sms_send_options&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;text&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;otp_options&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;generated&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;otp_length&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;4&quot;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
