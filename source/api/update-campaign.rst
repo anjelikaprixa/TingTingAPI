@@ -4,7 +4,7 @@ Update Campaign Endpoint
 +--------------------------------------------------------------------+-------------------+------------------------------------------------+-----------------+
 | URL                                                                | Required Values   | Other Values                                   | HTTP Methods    |
 +====================================================================+===================+================================================+=================+
-| https://app.tingting.io/api/v1/campaign/<campaign_id>/             | Campaign Id       | name, services, message, sms_message, schedule | POST            |
+| https://app.tingting.io/api/v1/campaign/<campaign_id>/             | Campaign Id       | name, services, message, sms_message, schedule | PATCH           |
 +--------------------------------------------------------------------+-------------------+------------------------------------------------+-----------------+
 
 To update a campaign, you’ll need to provide the campaign ID in the URL of the API endpoint. 
