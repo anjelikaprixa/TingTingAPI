@@ -135,7 +135,7 @@ Sample Output for Individual Contact:
 +-----------------------------------------------------------------------------------+--------------------+----------------+
 | URL                                                                               | Required Values    | HTTP Methods   |
 +===================================================================================+====================+================+
-| https://app.tingting.io/api/v1/campaign/create/<campaign_id>/detail/              | Campaign ID        |     POST       |
+| https://app.tingting.io/api/v1/campaign/create/<campaign_id>/detail/              | Campaign ID        |     PATCH      |
 +-----------------------------------------------------------------------------------+--------------------+----------------+
 
 Sample Input To Add Bulk Contact:
