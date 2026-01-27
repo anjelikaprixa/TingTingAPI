@@ -146,9 +146,9 @@ Sample Request Body:
 
     {
         "contacts": [
-            { "number": "9841234567", "other_variables": {} },
-            { "number": "9841234568" },
-            { "number": "9841234569", "other_variables": { "name": "Jane" } }
+            { "number": "1231231234", "other_variables": {"name": "Jane", "age": "22"} },
+            { "number": "1231231232" },
+            { "number": "1231231231", "other_variables": { "name": "Jane" } }
         ]
     }
 
@@ -161,43 +161,46 @@ Sample Output:
         "skipped": 0,
         "contacts": [
             {
-                "id": 9801687,
-                "updated_at": "Jan. 27, 2026, 04:43 PM",
-                "created_at": "2026-01-27T16:43:04.457951+05:45",
+                "id": 9801692,
+                "updated_at": "Jan. 27, 2026, 05:19 PM",
+                "created_at": "2026-01-27T17:19:46.911153+05:45",
                 "deleted_at": null,
-                "number": "9841234567",
+                "number": "1231231234",
+                "status": "not started",
+                "other_variables": {
+                    "name": "Jane",
+                    "age": "22"
+                },
+                "credit_consumed": 0,
+                "credit_consumed_SMS": 0,
+                "duration": "",
+                "playback": "",
+                "uuid": "50dbe25c-034c-4c2e-93e8-c9dfeaa4532f",
+                "failover_sms_sent": false,
+                "campaing": 3278
+            },
+            {
+                "id": 9801693,
+                "updated_at": "Jan. 27, 2026, 05:19 PM",
+                "created_at": "2026-01-27T17:19:46.922063+05:45",
+                "deleted_at": null,
+                "number": "1231231232",
                 "status": "not started",
                 "other_variables": {},
                 "credit_consumed": 0,
                 "credit_consumed_SMS": 0,
                 "duration": "",
                 "playback": "",
-                "uuid": "5ea8bf80-f34f-4873-86d8-4bce6a79508f",
+                "uuid": "e6f697c3-9ff6-4532-a38e-9aa413b6d29c",
                 "failover_sms_sent": false,
-                "campaing": 3266
+                "campaing": 3278
             },
             {
-                "id": 9801688,
-                "updated_at": "Jan. 27, 2026, 04:43 PM",
-                "created_at": "2026-01-27T16:43:04.468291+05:45",
+                "id": 9801694,
+                "updated_at": "Jan. 27, 2026, 05:19 PM",
+                "created_at": "2026-01-27T17:19:46.930727+05:45",
                 "deleted_at": null,
-                "number": "9841234568",
-                "status": "not started",
-                "other_variables": {},
-                "credit_consumed": 0,
-                "credit_consumed_SMS": 0,
-                "duration": "",
-                "playback": "",
-                "uuid": "9a58fd4a-3ed7-465e-88bf-04910862f002",
-                "failover_sms_sent": false,
-                "campaing": 3266
-            },
-            {
-                "id": 9801689,
-                "updated_at": "Jan. 27, 2026, 04:43 PM",
-                "created_at": "2026-01-27T16:43:04.474707+05:45",
-                "deleted_at": null,
-                "number": "9841234569",
+                "number": "1231231231",
                 "status": "not started",
                 "other_variables": {
                     "name": "Jane"
@@ -206,9 +209,9 @@ Sample Output:
                 "credit_consumed_SMS": 0,
                 "duration": "",
                 "playback": "",
-                "uuid": "8e243115-bf25-4d76-bc1e-6cf165e14d18",
+                "uuid": "eb25a16e-0805-42b4-83be-85256c7cc391",
                 "failover_sms_sent": false,
-                "campaing": 3266
+                "campaing": 3278
             }
         ],
         "errors": null
