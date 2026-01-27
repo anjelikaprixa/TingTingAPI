@@ -130,6 +130,90 @@ Sample Output for Individual Contact:
         "message": "New Contact added"
     }
 
+**Add Contacts in Campaign Endpoint**
+
++---------------------------------------------------------------------------------+--------------------+----------------+
+| URL                                                                             | Required Values    | HTTP Methods   |
++=================================================================================+====================+================+
+| https://app.tingting.io/api/v1/campaign/<campaign_id>/add-contact/              | Campaign ID        |     POST       |
++---------------------------------------------------------------------------------+--------------------+----------------+
+
+Add multiple contacts to a campaign in a single request. Each contact can include ``number`` and optional ``other_variables``.
+
+Sample Request Body:
+
+.. code-block:: json
+
+    {
+        "contacts": [
+            { "number": "9841234567", "other_variables": {} },
+            { "number": "9841234568" },
+            { "number": "9841234569", "other_variables": { "name": "Jane" } }
+        ]
+    }
+
+Sample Output:
+
+.. code-block:: json
+
+    {
+        "created": 3,
+        "skipped": 0,
+        "contacts": [
+            {
+                "id": 9801687,
+                "updated_at": "Jan. 27, 2026, 04:43 PM",
+                "created_at": "2026-01-27T16:43:04.457951+05:45",
+                "deleted_at": null,
+                "number": "9841234567",
+                "status": "not started",
+                "other_variables": {},
+                "credit_consumed": 0,
+                "credit_consumed_SMS": 0,
+                "duration": "",
+                "playback": "",
+                "uuid": "5ea8bf80-f34f-4873-86d8-4bce6a79508f",
+                "failover_sms_sent": false,
+                "campaing": 3266
+            },
+            {
+                "id": 9801688,
+                "updated_at": "Jan. 27, 2026, 04:43 PM",
+                "created_at": "2026-01-27T16:43:04.468291+05:45",
+                "deleted_at": null,
+                "number": "9841234568",
+                "status": "not started",
+                "other_variables": {},
+                "credit_consumed": 0,
+                "credit_consumed_SMS": 0,
+                "duration": "",
+                "playback": "",
+                "uuid": "9a58fd4a-3ed7-465e-88bf-04910862f002",
+                "failover_sms_sent": false,
+                "campaing": 3266
+            },
+            {
+                "id": 9801689,
+                "updated_at": "Jan. 27, 2026, 04:43 PM",
+                "created_at": "2026-01-27T16:43:04.474707+05:45",
+                "deleted_at": null,
+                "number": "9841234569",
+                "status": "not started",
+                "other_variables": {
+                    "name": "Jane"
+                },
+                "credit_consumed": 0,
+                "credit_consumed_SMS": 0,
+                "duration": "",
+                "playback": "",
+                "uuid": "8e243115-bf25-4d76-bc1e-6cf165e14d18",
+                "failover_sms_sent": false,
+                "campaing": 3266
+            }
+        ],
+        "errors": null
+    }
+
 **Add Bulk Contact in Campaign Endpoint**
 
 +-----------------------------------------------------------------------------------+--------------------+----------------+
