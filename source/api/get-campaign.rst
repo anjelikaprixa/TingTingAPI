@@ -11,6 +11,42 @@ Information of all of your campaigns are retrieved at this endpoint. The informa
 name, user phones, services, description, mesage,  status, category, voice, audio_file, bulk_file, etc. The id is to be used in the future to update, delete 
 or begin the campaign.
 
+Pagination (CustomPaginator)
+----------------------------
+
++----------+----------+----------+--------------------------------------------------+
+| Param    | Type     | Default  | Description                                      |
++==========+==========+==========+==================================================+
+| limit    | int      | 10       | Results per page (max 10)                       |
++----------+----------+----------+--------------------------------------------------+
+| offset   | int      | 0        | Number of results to skip                        |
++----------+----------+----------+--------------------------------------------------+
+
+Example: ``?limit=10&offset=0``
+
+Filters (query params)
+---------------------
+
++------------+----------+--------------------------------------------------------------------------------------------------+
+| Param      | Type     | Description                                                                                      |
++============+==========+==================================================================================================+
+| status     | str      | Exact status. Allowed: "Not Started", "Scheduled", "Running", "Completed", "Terminated".         |
++------------+----------+--------------------------------------------------------------------------------------------------+
+| search     | str      | Campaign name (case-insensitive, partial match).                                                  |
++------------+----------+--------------------------------------------------------------------------------------------------+
+| draft      | bool     | ``true``/``True`` → only drafts; omitted or ``false`` → only non-drafts.                         |
++------------+----------+--------------------------------------------------------------------------------------------------+
+| sort_by    | str      | ``asc`` = oldest first by updated_at, ``des`` = newest first.                                    |
++------------+----------+--------------------------------------------------------------------------------------------------+
+| from_date  | int      | Unix timestamp (seconds). Only campaigns with updated_at >= from_date.                           |
++------------+----------+--------------------------------------------------------------------------------------------------+
+| to_date    | int      | Unix timestamp (seconds). Only campaigns with updated_at <= to_date (inclusive day).             |
++------------+----------+--------------------------------------------------------------------------------------------------+
+
+Status is matched exactly; use the stored values (e.g. "Completed" not "completed").
+
+Example: ``/api/v1/campaign/?limit=10&offset=0&status=Completed`` — page size 10, start at 0, only campaigns whose status is exactly "Completed".
+
 Here is an example of the result: The campaign ID is used to edit, delete, run and perform other 
 campaign activities.
 

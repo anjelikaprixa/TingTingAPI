@@ -6,6 +6,7 @@ API
    :caption: API Endpoints:
 
    authentication
+   dashboard
    phone-numbers
    campaign
    otp

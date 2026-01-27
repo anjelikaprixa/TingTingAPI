@@ -101,7 +101,7 @@ Sample Output:
     }
 
 
-**Add Individual Contact in Campaign Endpoint**
+**Add Contact(s) in Campaign Endpoint**
 
 +---------------------------------------------------------------------------------+--------------------+----------------+
 | URL                                                                             | Required Values    | HTTP Methods   |
@@ -109,7 +109,9 @@ Sample Output:
 | https://app.tingting.io/api/v1/campaign/<campaign_id>/add-contact/              | Campaign ID        |     POST       |
 +---------------------------------------------------------------------------------+--------------------+----------------+
 
-Sample Input To Add Individual Contact:
+The body can be passed in two formats:
+
+**Single contact** — object with ``number`` and optional ``other_variables``:
 
 .. code-block:: json
 
@@ -122,7 +124,7 @@ Sample Input To Add Individual Contact:
         }
     }
 
-Sample Output for Individual Contact:
+Sample output:
 
 .. code-block:: json
 
@@ -130,29 +132,21 @@ Sample Output for Individual Contact:
         "message": "New Contact added"
     }
 
-**Add Contacts in Campaign Endpoint**
+**Array of contacts** — object with a ``contacts`` array; each item has ``number`` and optional ``other_variables``:
 
-+---------------------------------------------------------------------------------+--------------------+----------------+
-| URL                                                                             | Required Values    | HTTP Methods   |
-+=================================================================================+====================+================+
-| https://app.tingting.io/api/v1/campaign/<campaign_id>/add-contact/              | Campaign ID        |     POST       |
-+---------------------------------------------------------------------------------+--------------------+----------------+
-
-Add multiple contacts to a campaign in a single request. Each contact can include ``number`` and optional ``other_variables``.
-
-Sample Request Body:
+Sample request body:
 
 .. code-block:: json
 
     {
         "contacts": [
-            { "number": "1231231234", "other_variables": {"name": "Jane", "age": "22"} },
-            { "number": "1231231232" },
-            { "number": "1231231231", "other_variables": { "name": "Jane" } }
+            { "number": "9841234567", "other_variables": {} },
+            { "number": "9841234568" },
+            { "number": "9841234569", "other_variables": { "name": "Jane" } }
         ]
     }
 
-Sample Output:
+Sample output:
 
 .. code-block:: json
 
