@@ -1,12 +1,42 @@
 Download Report Endpoint
-==============
+========================
+
+Campaign report
+---------------
 
 +----------------------------------------------------------------------------+-------------------+-----------------+
 | URL                                                                        | Required Values   | HTTP Methods    |
 +============================================================================+===================+=================+
-| https://app.tingting.io/api/v1/download/report/<campaign_id>/              | Campaign ID       | GET             |
+| https://app.tingting.io/api/v1/download/report/<campaign_id>/             | Campaign ID       | GET             |
 +----------------------------------------------------------------------------+-------------------+-----------------+
 
-Note that the <campaign_id> in the URL should be replaced with the ID of the campaign you want to download the report of. 
+Replace ``<campaign_id>`` with the campaign ID you want to download the report for.
 
-By using this endpoint, report of the campaign is downloaded in csv
+This endpoint downloads campaign report in CSV format.
+
+Survey report (separate endpoint)
+---------------------------------
+
++--------------------------------------------------------------------------------+-------------------+-----------------+
+| URL                                                                            | Required Values   | HTTP Methods    |
++================================================================================+===================+=================+
+| https://app.tingting.io/api/v1/download/survey/<survey_id>/report/            | Survey ID         | GET             |
++--------------------------------------------------------------------------------+-------------------+-----------------+
+
+Replace ``<survey_id>`` with the survey ID you want to download the survey report for.
+
+Query parameters (optional)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
++-----------+---------------------------------------------------------------+
+| Param     | Description                                                   |
++===========+===============================================================+
+| format    | Use ``json`` to return JSON response.                        |
+|           | Default response is CSV when format is not provided.         |
++-----------+---------------------------------------------------------------+
+
+Example:
+
+::
+
+    GET /api/v1/download/survey/16294/report/?format=json
