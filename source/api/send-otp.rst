@@ -35,7 +35,7 @@ Sample Input For Customized OTP
         "sms_send_options": "text",
         "otp_options": "personnel",
         "otp": "12345",
-        "company_name": "prixa"
+        "company_name": "TingTing"
     }
 
 
@@ -50,7 +50,7 @@ Sample Input For Auto-Generated OTP
         "voice_input": "np_rija",
         "otp_options": "personnel",
         "otp": "12345",
-        "company_name": "prixa"
+        "company_name": "TingTing"
     }
 
 The details of the sent OTP is shown.
@@ -68,13 +68,13 @@ Sample Output for text:
             "details": {
                 "number": "9861489014",
                 "otp_options": "personnel",
-                "message": "हेल्लो नमस्ते",
+                "message": "TingTing: Hi your OTP is 564546",
                 "otp": "564546",
                 "sms_send_options": "text",
                 "credits_used": 1,
                 "remaining_sms_credits": 62,
                 "remaining_phone_credits": 127,
-                "company_name": "prixa"
+                "company_name": "TingTing"
             }
         }
     }
@@ -93,7 +93,7 @@ Sample Output for voice:
         "details": {
             "number": "9861489014",
             "otp_options": "personnel",
-            "message": "हेल्लो नमस्ते",
+            "message": "TingTing: Hi your OTP is 564546",
             "otp": "564546",
             "sms_send_options": "voice",
             "credits_used": 1,
@@ -101,7 +101,7 @@ Sample Output for voice:
             "remaining_phone_credits": 127,
             "voice_input": "np_rija",
             "length_factor": 1.0,
-            "company_name": "prixa"
+            "company_name": "TingTing"
         }
     }
 }
