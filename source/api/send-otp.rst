@@ -1,11 +1,11 @@
 Send OTP Endpoint
 ==============
 
-+---------------------------------------------------------------------+-----------------------------------+---------------+
-| URL                                                                 | Required Values                   | HTTP Methods  |
-+=====================================================================+===================================+===============+
-| https://app.tingting.io/api/v1/auths/send/otp/                      | number, message, sms_send_options |     POST      |
-+---------------------------------------------------------------------+-----------------------------------+---------------+
++---------------------------------------------------------------------+-------------------------------------------------+---------------+
+| URL                                                                 | Required Values                                 | HTTP Methods  |
++=====================================================================+=================================================+===============+
+| https://app.tingting.io/api/v1/auths/send/otp/                      | number, message, sms_send_options, company_name |     POST      |
++---------------------------------------------------------------------+-------------------------------------------------+---------------+
 
 By utilizing this endpoint, you can send OTPs to users by specifying the recipient’s phone number as a string, along with 
 the message containing the OTP and the desired delivery method - either through voice or text through the sms_send_option attribute. 
@@ -34,7 +34,8 @@ Sample Input For Customized OTP
         "message": "Hi your OTP is {otp}",
         "sms_send_options": "text",
         "otp_options": "personnel",
-        "otp": "12345"
+        "otp": "12345",
+        "company_name": "prixa"
     }
 
 
@@ -48,7 +49,8 @@ Sample Input For Auto-Generated OTP
         "sms_send_options": "voice",
         "voice_input": "np_rija",
         "otp_options": "personnel",
-        "otp": "12345"
+        "otp": "12345",
+        "company_name": "prixa"
     }
 
 The details of the sent OTP is shown.
@@ -71,7 +73,8 @@ Sample Output for text:
                 "sms_send_options": "text",
                 "credits_used": 1,
                 "remaining_sms_credits": 62,
-                "remaining_phone_credits": 127
+                "remaining_phone_credits": 127,
+                "company_name": "prixa"
             }
         }
     }
@@ -97,7 +100,8 @@ Sample Output for voice:
             "remaining_sms_credits": 63,
             "remaining_phone_credits": 127,
             "voice_input": "np_rija",
-            "length_factor": 1.0
+            "length_factor": 1.0,
+            "company_name": "prixa"
         }
     }
 }
